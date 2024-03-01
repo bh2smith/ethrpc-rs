@@ -436,8 +436,9 @@ pub struct SignedEip2930Transaction {
     /// Chain ID that the transaction is valid on.
     pub chain_id: U256,
     /// Y parity of the signature.
-    #[serde(alias = "v")]
-    pub y_parity: YParity,
+    pub y_parity: Option<YParity>,
+    /// V
+    pub v: YParity,
     /// R
     pub r: U256,
     /// S
@@ -497,8 +498,9 @@ pub struct SignedEip1559Transaction {
     /// Chain ID that the transaction is valid on.
     pub chain_id: U256,
     /// Y parity of the signature.
-    #[serde(alias = "v")]
-    pub y_parity: YParity,
+    pub y_parity: Option<YParity>,
+    /// V
+    pub v: YParity,
     /// R
     pub r: U256,
     /// S
@@ -565,8 +567,9 @@ pub struct SignedEip4844Transaction {
     /// Chain ID that the transaction is valid on.
     pub chain_id: U256,
     /// Y parity of the signature.
-    #[serde(alias = "v")]
-    pub y_parity: YParity,
+    pub y_parity: Option<YParity>,
+    /// V
+    pub v: YParity,
     /// R
     pub r: U256,
     /// S

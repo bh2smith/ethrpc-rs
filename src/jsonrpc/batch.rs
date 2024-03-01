@@ -317,7 +317,8 @@ mod tests {
                                 "chainId": "0x1",
                                 "v": "0x0",
                                 "r": "0x269746c7467dcb8d6535ff2ec3cc2257872bd9f55564b1b364e750263f831902",
-                                "s": "0x2c391ac90acdd9cf0f4e28f3647a9be74b05a7b261a83c0ae8199c733012a415"
+                                "s": "0x2c391ac90acdd9cf0f4e28f3647a9be74b05a7b261a83c0ae8199c733012a415",
+                                "yParity": "0x1"
                               }
                         ],
                         "transactionsRoot": "0xfe498a1338059330121151a24a01070321a63bbd2c82607ae747a26cd493e141",
