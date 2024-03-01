@@ -263,7 +263,11 @@ mod tests {
 
     #[test]
     fn batch_request() {
-        let (latest, safe, receipts) = call(
+        let (
+            latest, 
+            safe,
+            receipts
+        ) = call(
             (
                 (eth::BlockNumber, Empty),
                 (eth::GetBlockByNumber, (BlockTag::Safe.into(), Hydrated::Yes)),
@@ -298,28 +302,27 @@ mod tests {
                         "timestamp": "0x62b147f5",
                         "totalDifficulty": "0xb0e7fa732d136d6e1f4",
                         "transactions": [
-                          {
-                            "accessList": [],
-                            "blockHash": "0x0950f85eb900296a98747b00ff2acfdeb1e5dba5060ee3fd25b83aaec6b24215",
-                            "blockNumber": "0xe4e364",
-                            "chainId": "0x1",
-                            "from": "0xbcbd4885ee8b2b74249c5ad9b8b668fb256a51b1",
-                            "gas": "0xb57a",
-                            "gasPrice": "0xbcba73007",
-                            "hash": "0x9893b05d6c714967f301b929d3b133c84607eb142aeaa8f6efe791c071906458",
-                            "input": "0x095ea7b3000000000000000000000000881d40237659c251811cec9c364ef91dc08d300cffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-                            "maxFeePerGas": "0x10882e96a0",
-                            "maxPriorityFeePerGas": "0x4fd24321",
-                            "nonce": "0xb20",
-                            "r": "0x576baaa1748639f39fdb655b6dfd3e9318b412942d1ab468a2254ac08a094f9f",
-                            "s": "0x2e8d5cb746b8ec3902444858ac11fc7e6acb7d993cdbc6945e59fc804a76dc2b",
-                            "to": "0x6b175474e89094c44da98b954eedeac495271d0f",
-                            "transactionIndex": "0x0",
-                            "type": "0x2",
-                            "v": "0x0",
-                            "value": "0x0",
-                            "yParity": "0x0"
-                          }
+                            {
+                                "blockHash": "0x0950f85eb900296a98747b00ff2acfdeb1e5dba5060ee3fd25b83aaec6b24215",
+                                "blockNumber": "0xe4e364",
+                                "from": "0x475ef7c1493bb29642529c30ad9bd4d1f27aed98",
+                                "gas": "0xc05a",
+                                "gasPrice": "0xba43b7400",
+                                "maxPriorityFeePerGas": "0x9502f900",
+                                "maxFeePerGas": "0xba43b7400",
+                                "hash": "0x20ea0eb2a3a3928ccfa86246fdf5f1f4ddd8c98a04f67ace5e149e22ecfe6b3a",
+                                "input": "0xa22cb4650000000000000000000000001e0049783f008a0085193e00003d00cd54003c710000000000000000000000000000000000000000000000000000000000000001",
+                                "nonce": "0x26a",
+                                "to": "0x2ee6af0dff3a1ce3f7e3414c52c48fd50d73691e",
+                                "transactionIndex": "0x87",
+                                "value": "0x0",
+                                "type": "0x2",
+                                "accessList": [],
+                                "chainId": "0x1",
+                                "v": "0x0",
+                                "r": "0x269746c7467dcb8d6535ff2ec3cc2257872bd9f55564b1b364e750263f831902",
+                                "s": "0x2c391ac90acdd9cf0f4e28f3647a9be74b05a7b261a83c0ae8199c733012a415"
+                              }
                         ],
                         "transactionsRoot": "0xfe498a1338059330121151a24a01070321a63bbd2c82607ae747a26cd493e141",
                         "uncles": []
@@ -358,6 +361,6 @@ mod tests {
             }
         );
         assert_eq!(latest, 0x1163fd1);
-        assert_eq!(safe.unwrap().number, 0x1163fa3);
+        assert_eq!(safe.unwrap().number, 0xe4e364);
     }
 }

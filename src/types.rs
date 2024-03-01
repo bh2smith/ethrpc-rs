@@ -643,6 +643,7 @@ pub struct Block {
     #[serde(with = "serialization::bytes")]
     pub extra_data: Vec<u8>,
     /// The mix hash.
+    #[serde(default)]
     pub mix_hash: Digest,
     /// The nonce.
     pub nonce: BlockNonce,
