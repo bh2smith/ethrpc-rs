@@ -646,7 +646,7 @@ pub struct Block {
     #[serde(default)]
     pub mix_hash: Digest,
     /// The nonce.
-    pub nonce: BlockNonce,
+    pub nonce: Option<BlockNonce>,
     /// The total difficulty.
     pub total_difficulty: U256,
     /// The base fee per gas.

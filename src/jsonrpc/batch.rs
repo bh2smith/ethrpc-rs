@@ -263,11 +263,7 @@ mod tests {
 
     #[test]
     fn batch_request() {
-        let (
-            latest, 
-            safe,
-            receipts
-        ) = call(
+        let (latest, safe, receipts) = call(
             (
                 (eth::BlockNumber, Empty),
                 (eth::GetBlockByNumber, (BlockTag::Safe.into(), Hydrated::Yes)),
