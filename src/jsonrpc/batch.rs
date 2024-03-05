@@ -279,50 +279,50 @@ mod tests {
                     r#"[
                       "0x1163fd1",
                       {
-                        "baseFeePerGas": "0xb7bd4ece6",
-                        "difficulty": "0x30f9a5c24b37e8",
-                        "extraData": "0x75732d77657374312d38",
-                        "gasLimit": "0x1ca35d2",
-                        "gasUsed": "0xc05fcf",
-                        "hash": "0x0950f85eb900296a98747b00ff2acfdeb1e5dba5060ee3fd25b83aaec6b24215",
-                        "logsBloom": "0x5d32840202020937554098c4b210833104680b9366c803640c74b0c80058114e0042c3cc11824470b40c50f0068f0783031a421a2b0fb9245250ac01302825889908960070244828a8c327aa8984602501472c8cc1630c988e435e218300601713a900d08e624e861f0408b901418fb02724001ced0886a954b5141dc07a0d891234490302225447108a030120840570352caa4131a6405a28e009505314c480af122327b3e0e91e06000b860e8a448040158e2923c3058a6162806454cae51c7120e683404b0c17450626c4085e330026f5bacd40082998ca000f8e18792010a038628a01100283270a0030396b59208870084534dc40e2004539a22b109e27",
-                        "miner": "0xea674fdde714fd979de3edf0f56aa9716b898ec8",
-                        "mixHash": "0x2795bc665f9ccdffd3d8ef28b29401cad05a5f4ffe88acf206c0f6d06880ebd2",
-                        "nonce": "0xedb67ceba7323a68",
-                        "number": "0xe4e364",
-                        "parentHash": "0x7436cc9a28f3ab1265a252ba36d5d7042641369043a140e99e43bff98d58f015",
-                        "receiptsRoot": "0x07c332da0afbe0a02195af3fe91445f785b7ec96e149e83eb959ab2127d8b396",
+                        "baseFeePerGas": "0x1418f329",
+                        "difficulty": "0x0",
+                        "extraData": "0x",
+                        "gasLimit": "0x1c9c380",
+                        "gasUsed": "0xb76d",
+                        "hash": "0xfc70e073ec6e1bb7f387698e4be418d7b1ff2216f625cdf41e1b80fb08029ef5",
+                        "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                        "miner": "0x4200000000000000000000000000000000000011",
+                        "mixHash": "0x8bc8a48326d9309959f2452206c1c842be9fcc9840c789845caab9d290a9700c",
+                        "nonce": "0x0000000000000000",
+                        "number": "0x112",
+                        "parentHash": "0xcfbc479d5f63476538db9ff15295167a6e91ecc9d6cf54be471eded689c251c9",
+                        "receiptsRoot": "0x8c303881b3e408cc739f55ef3e5133075d552cbec9ee987aff6b71f58cf291ee",
                         "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
-                        "size": "0xdf00",
-                        "stateRoot": "0xcdcfa6bb77e0364841d015b1e84fafcd0c3f8ed1db959f0bb2c38c287c6aea9a",
-                        "timestamp": "0x62b147f5",
-                        "totalDifficulty": "0xb0e7fa732d136d6e1f4",
+                        "size": "0x38a",
+                        "stateRoot": "0x86be45fb7a22b8c12cbce8d538372b800377cc589de590b6d88f5f65dde97df8",
+                        "timestamp": "0x65da607b",
+                        "totalDifficulty": "0x0",
                         "transactions": [
-                            {
-                                "blockHash": "0x0950f85eb900296a98747b00ff2acfdeb1e5dba5060ee3fd25b83aaec6b24215",
-                                "blockNumber": "0xe4e364",
-                                "from": "0x475ef7c1493bb29642529c30ad9bd4d1f27aed98",
-                                "gas": "0xc05a",
-                                "gasPrice": "0xba43b7400",
-                                "maxPriorityFeePerGas": "0x9502f900",
-                                "maxFeePerGas": "0xba43b7400",
-                                "hash": "0x20ea0eb2a3a3928ccfa86246fdf5f1f4ddd8c98a04f67ace5e149e22ecfe6b3a",
-                                "input": "0xa22cb4650000000000000000000000001e0049783f008a0085193e00003d00cd54003c710000000000000000000000000000000000000000000000000000000000000001",
-                                "nonce": "0x26a",
-                                "to": "0x2ee6af0dff3a1ce3f7e3414c52c48fd50d73691e",
-                                "transactionIndex": "0x87",
-                                "value": "0x0",
-                                "type": "0x2",
-                                "accessList": [],
-                                "chainId": "0x1",
-                                "v": "0x0",
-                                "r": "0x269746c7467dcb8d6535ff2ec3cc2257872bd9f55564b1b364e750263f831902",
-                                "s": "0x2c391ac90acdd9cf0f4e28f3647a9be74b05a7b261a83c0ae8199c733012a415",
-                                "yParity": "0x1"
-                              }
+                          {
+                            "blockHash": "0xfc70e073ec6e1bb7f387698e4be418d7b1ff2216f625cdf41e1b80fb08029ef5",
+                            "blockNumber": "0x112",
+                            "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+                            "gas": "0xf4240",
+                            "gasPrice": "0x0",
+                            "hash": "0x13a644af4f64ce801dcd57faa823e8952f2290b810fdd31995dda62977ed3df1",
+                            "input": "0x015d8eb90000000000000000000000000000000000000000000000000000000001267f330000000000000000000000000000000000000000000000000000000065da6073000000000000000000000000000000000000000000000000000000075d3f861097c24796a4f639846a6a3ea3a59c11de8d89e11f551bae8feca9271a78926d420000000000000000000000000000000000000000000000000000000000000004000000000000000000000000415c8893d514f9bc5211d36eeda4183226b84aa700000000000000000000000000000000000000000000000000000000000000bc00000000000000000000000000000000000000000000000000000000000a6fe0",
+                            "nonce": "0x111",
+                            "to": "0x4200000000000000000000000000000000000015",
+                            "transactionIndex": "0x0",
+                            "value": "0x0",
+                            "type": "0x7e",
+                            "v": "0x0",
+                            "r": "0x0",
+                            "s": "0x0",
+                            "sourceHash": "0x5a1b66228a26547e2ce6fe1aa734d2c34e062e42ccd5710463e6987890f1ad5d",
+                            "mint": "0x0",
+                            "depositReceiptVersion": "0x1"
+                          }
                         ],
-                        "transactionsRoot": "0xfe498a1338059330121151a24a01070321a63bbd2c82607ae747a26cd493e141",
-                        "uncles": []
+                        "transactionsRoot": "0xb01a2ad2c1ceb76f2edcdc02f2e0453c52e24c421fb04132cdfc0da5b70a593e",
+                        "uncles": [],
+                        "withdrawals": [],
+                        "withdrawalsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421"
                       },
                       [
                         {
@@ -358,6 +358,6 @@ mod tests {
             }
         );
         assert_eq!(latest, 0x1163fd1);
-        assert_eq!(safe.unwrap().number, 0xe4e364);
+        assert_eq!(safe.unwrap().number, 0x112);
     }
 }
