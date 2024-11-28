@@ -360,4 +360,76 @@ mod tests {
         assert_eq!(latest, 0x1163fd1);
         assert_eq!(safe.unwrap().number, 0x112);
     }
+
+    #[test]
+    fn base_block() {
+        let (block,) = call(
+            (
+                (eth::GetBlockByNumber, (22_962_327.into(), Hydrated::Yes)),
+            ),
+            roundtrip(
+                json!([
+                    { "method": "eth_getBlockByNumber", "params": ["0x15e6097", true] },
+                ]),
+                serde_json::from_str(
+                    r#"[
+                    {
+    "baseFeePerGas": "0x18ccb55",
+    "blobGasUsed": "0x0",
+    "difficulty": "0x0",
+    "excessBlobGas": "0x0",
+    "extraData": "0x",
+    "gasLimit": "0xaba9500",
+    "gasUsed": "0x1c83bf7",
+    "hash": "0x277683de55f12c9965d18b58bb77484d6206b6c8d9738c4a9785581d0cab06c3",
+    "logsBloom": "0x28608801582455c2c000508ca3af2024ca58273c20facc00228c2ea2b450788d451b81041ea11362950298dbe4823e11b13c4d7c0910f60e67d3079cd1bfe49ac4334c38805f04c855cd543899214a2408c55c48166c4e926d180e5ae4e101a374c00472dacec041870554b939060af2012805079c5dad5a1103a65616a895e4144447548909912261451672f596a66046e8946778e1646ae80a075611e00cdeb366d132aa8316e45b504c452ca2984820d3412244434c2e77770771214207b61c9ab40a20c15849072349ec8a1600f72fc0ad04a4081b5060fabac3e46868b58c171e3121c697147c0aa12070022de8ac26b907d564066560223b548001aa57",
+    "miner": "0x4200000000000000000000000000000000000011",
+    "mixHash": "0x3f1feba1d516f8063c0a35f3a03669a0ddf36c37bae800f6b8df469a6896ae68",
+    "nonce": "0x0000000000000000",
+    "number": "0x15e6097",
+    "parentBeaconBlockRoot": "0x2f5c7fffa145b34074dcea566896d5ab18b74d94573014d4cc33ee2694a38eb4",
+    "parentHash": "0x5d6edf1206c2cbd75f42f97c09afc8e9503b78249dc258da7fecf63d4784b36a",
+    "receiptsRoot": "0x9f37b597551c7207723ef2841c85fb3226de8c3124de34e0579998e8c53f2fd0",
+    "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+    "size": "0x10840",
+    "stateRoot": "0x3713f5d491488ed3c6328216dfc1b8f63646ebd8a34fef7015dc54c79b0a5296",
+    "timestamp": "0x67471e11",
+    "totalDifficulty": "0x0",
+    "transactions": [
+      {
+        "blockHash": "0x277683de55f12c9965d18b58bb77484d6206b6c8d9738c4a9785581d0cab06c3",
+        "blockNumber": "0x15e6097",
+        "depositReceiptVersion": "0x1",
+        "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+        "gas": "0xf4240",
+        "gasPrice": "0x0",
+        "hash": "0xe8011f268868e10854ed4ae336549cef28a786f737a39f76e84ee1c09a324721",
+        "input": "0x440a5e20000008dd00101c1200000000000000000000000067471d63000000000144b28500000000000000000000000000000000000000000000000000000002d8e94fe300000000000000000000000000000000000000000000000000000000c2d3d9e8d4d4066eae53cee2245cd6c15d4f749db86bec32987c8445df3a9fe278f6ae750000000000000000000000005050f69a9786f081509234f1a7f4684b5e5b76c9",
+        "mint": null,
+        "nonce": "0x15e6098",
+        "r": "0x0",
+        "s": "0x0",
+        "sourceHash": "0x68e918cc1465b9aef653c1e85c54e723aef49be7670f13316ac1f5a497344c0a",
+        "to": "0x4200000000000000000000000000000000000015",
+        "transactionIndex": "0x0",
+        "type": "0x7e",
+        "v": "0x0",
+        "value": "0x0",
+        "yParity": "0x0"
+      }
+    ],
+    "transactionsRoot": "0x2d065d6e7aa44fcc6e828244f87f954f911b015e17b7a7fd2bafde61e21130de",
+    "uncles": [],
+    "withdrawals": [],
+    "withdrawalsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421"
+  }
+
+                    ]"#,
+                )
+                .unwrap(),
+            ),
+        )
+        .unwrap();
+        assert_eq!(block.unwrap().number, 22_962_327);
+    }
 }

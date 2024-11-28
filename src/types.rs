@@ -646,7 +646,7 @@ pub struct BlastSystemTransaction {
     pub s: U256,
     // Undocumented extra fields.
     pub source_hash: Digest,
-    pub mint: U256,
+    pub mint: Option<U256>,
     pub deposit_receipt_version: U256,
 }
 
