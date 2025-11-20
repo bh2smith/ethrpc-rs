@@ -701,7 +701,7 @@ pub struct Block {
     /// The nonce.
     pub nonce: Option<BlockNonce>,
     /// The total difficulty.
-    pub total_difficulty: U256,
+    pub total_difficulty: Option<U256>,
     /// The base fee per gas.
     #[serde(default)]
     pub base_fee_per_gas: U256,
